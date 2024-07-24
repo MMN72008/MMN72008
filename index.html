@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Memory and History</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6f8d31a8e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="calculator-container">
+        <form name="Calculator" class="calculator">
+            <input name="Input" type="text" id="input" readonly placeholder="0">
+
+            <!-- Memory Buttons -->
+            <button type="button" class="btql" onclick="recallMemory()">MR</button>
+            <button type="button" class="btql" onclick="clearMemory()">MC</button>
+            <button type="button" class="btql" onclick="storeMemory()">MS</button>
+            <button type="button" class="btql" onclick="storeMemory()">MS</button>
+
+            <!-- Operator and Control Buttons -->
+            <button type="button" class="btnq" onclick="addCharacter('%')"><i class="fas fa-percentage"></i></button>
+            <button type="button" class="btnq" onclick="clearEntry()">CE</button>
+            <button type="button" class="btnq" onclick="clearAll()">C</button>
+            <button type="button" class="btnq" onclick="deleteLast()"><i class="fas fa-eraser"></i></button>
+
+            <button type="button" class="btnq" onclick="addCharacter('1/')"><i class="fas fa-subscript"></i></button>
+            <button type="button" class="btnq" onclick="addCharacterq('^')"><i class="fas fa-superscript"></i></button>
+            <button type="button" class="btnq" onclick="addCharacterq('√')"><i
+                    class="fas fa-square-root-alt"></i></button>
+            <button type="button" class="btnq" onclick="addCharacterq('/')"><i class="fas fa-divide"></i></button>
+
+            <!-- Number Buttons -->
+            <button type="button" class="btn" onclick="addCharacter('7')">7</button>
+            <button type="button" class="btn" onclick="addCharacter('8')">8</button>
+            <button type="button" class="btn" onclick="addCharacter('9')">9</button>
+            <button type="button" class="btnq" onclick="addCharacterq('*')"><i class="fas fa-times"></i></button>
+
+            <button type="button" class="btn" onclick="addCharacter('4')">4</button>
+            <button type="button" class="btn" onclick="addCharacter('5')">5</button>
+            <button type="button" class="btn" onclick="addCharacter('6')">6</button>
+            <button type="button" class="btnq" onclick="addCharacterq('-')"><i class="fas fa-minus"></i></button>
+
+            <button type="button" class="btn" onclick="addCharacter('1')">1</button>
+            <button type="button" class="btn" onclick="addCharacter('2')">2</button>
+            <button type="button" class="btn" onclick="addCharacter('3')">3</button>
+            <button type="button" class="btnq" onclick="addCharacterq('+')"><i class="fas fa-plus"></i></button>
+
+            <button type="button" class="btn" onclick="toggleSign()">±</button>
+            <button type="button" class="btn" onclick="addCharacter('0')">0</button>
+            <button type="button" class="btn" onclick="addCharacterq('.')">.</button>
+            <button type="button" class="btn equa" onclick="calculateResult()">=</button>
+        </form>
+    </div>
+
+    <div class="history">
+        <div class="filter">
+            <button id="historybtn" class="on" onclick="showHistory()">History</button>
+            <button id="resultsbtn" onclick="showResults()">Results</button>
+        </div>
+        <ul id="history-list">
+            <!-- History and results will be populated here -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

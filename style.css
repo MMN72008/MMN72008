@@ -1,0 +1,161 @@
+
+body {
+    display: flex;
+    flex-direction: row;
+    
+    
+    height: 100vh;
+    background-color: #242424;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.calculator-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.calculator {
+    display: contents;
+}
+
+input[type="text"] {
+    color: white;
+    grid-column: span 4;
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    text-align: right;
+    background-color: #242424;
+    box-sizing: border-box;
+}
+
+button.btn,
+button.btnq,
+button.equa {
+    color: #fff;
+    padding: 2%;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #050505;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button.btn:hover,
+button.btnq:hover,
+button.equa:hover {
+    background-color: #3b3737;
+}
+
+button.equa {
+    background-color: #0153cf;
+    color: white;
+}
+
+button.equa:hover {
+    background-color: #7cb1ee;
+}
+
+button.btnq {
+    background-color: #141414;
+}
+
+button.btnq:hover {
+    background-color: #353535;
+}
+button.btql{
+    background-color: #242424;
+    border: none;
+    color: #fff;
+}
+
+.history {
+    
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #242424;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #242424;
+    
+    border-radius: 10px 10px 0 0;
+    
+}
+
+.filter button {
+    color: white;
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #242424;
+    transition: background-color 0.3s ease;
+}
+
+.filter button.on {
+    border-bottom: 3px solid#0d58fa;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+ul li {
+    color: #fff;
+    padding: 10px;
+    
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 500px) {
+    .history{
+        display: none;
+    }
+    .calculator-container {
+        gap: 5px;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    button.btn,
+    button.btnq,
+    button.equa {
+        padding: 2%;
+        font-size: 16px;
+    }
+}
